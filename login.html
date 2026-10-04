@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | B Forward Motors Masaka</title>
+<meta name="theme-color" content="#0b3d91">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-side">
+    <span id="brand"></span>
+    <h1>Your next car is one login away</h1>
+    <p style="color:#c9d0da;max-width:28rem">Log in to add cars to your cart, book test drives, get alerts when new cars arrive and chat with our team.</p>
+    <div class="hero-chips" style="margin:0">
+      <span class="chip" id="c1"></span><span class="chip" id="c2"></span><span class="chip" id="c3"></span>
+    </div>
+    <p><a class="btn btn-white btn-sm" href="/" id="back"></a></p>
+  </aside>
+  <main class="auth-main">
+    <div class="auth-card card pad">
+      <div class="tabs" role="tablist">
+        <button type="button" id="tabIn" class="on" role="tab">Log in</button>
+        <button type="button" id="tabUp" role="tab">Sign up</button>
+      </div>
+      <form id="inForm" novalidate>
+        <div class="field"><label for="inEmail">Email</label><input id="inEmail" type="email" autocomplete="username" maxlength="120"></div>
+        <div class="field"><label for="inPass">Password</label><input id="inPass" type="password" autocomplete="current-password" maxlength="128"></div>
+        <p class="err" id="inErr" role="alert"></p>
+        <button class="btn btn-blue btn-block btn-lg" type="submit" id="inBtn"></button>
+      </form>
+      <form id="upForm" novalidate hidden>
+        <div class="field"><label for="upName">Full name</label><input id="upName" autocomplete="name" maxlength="80"></div>
+        <div class="form-grid">
+          <div class="field"><label for="upEmail">Email</label><input id="upEmail" type="email" autocomplete="email" maxlength="120"></div>
+          <div class="field"><label for="upPhone">Phone</label><input id="upPhone" type="tel" autocomplete="tel" placeholder="+256..." maxlength="30"></div>
+        </div>
+        <div class="field"><label for="upPass">Password (8 or more characters)</label><input id="upPass" type="password" autocomplete="new-password" maxlength="128"></div>
+        <p class="err" id="upErr" role="alert"></p>
+        <button class="btn btn-red btn-block btn-lg" type="submit" id="upBtn"></button>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

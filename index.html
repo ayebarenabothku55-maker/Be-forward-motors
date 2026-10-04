@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B Forward Motors Masaka</title>
+<meta name="description" content="Quality cars in Masaka. Browse, book a test drive and buy online.">
+<meta name="theme-color" content="#0b3d91">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap" id="topbar"></div></div>
+<header class="site-header">
+  <div class="wrap">
+    <span id="brand"></span>
+    <nav class="nav" aria-label="Main">
+      <a class="link" href="#home">Home</a>
+      <a class="link" href="#cars">Cars</a>
+      <a class="link" href="#payment">Payment</a>
+      <a class="link" href="#feedback">Feedback</a>
+      <a class="link" href="#contact">Contact</a>
+      <span id="authBtns"></span>
+    </nav>
+  </div>
+  <div class="stripe"></div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:#e06a6a">Masaka's car dealer</p>
+      <h1>Quality cars.<br><span>Clear prices.</span><br><em>Drive today.</em></h1>
+      <p class="lead">Browse our cars online, book a test drive, pay with mobile money or bank, and chat with our team as soon as you log in.</p>
+      <div class="btn-row">
+        <a class="btn btn-blue btn-lg" href="#cars">Browse cars</a>
+        <a class="btn btn-red btn-lg" href="/login?next=/shop">Log in to buy</a>
+        <a class="btn btn-green btn-lg" href="#contact">Contact us</a>
+      </div>
+      <div class="hero-chips" id="heroChips"></div>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="section" id="cars">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Products uploaded</p><h2>Cars for sale</h2></div>
+      <p id="carCount"></p>
+    </div>
+    <div class="grid cars" id="carGrid"><p class="muted">Loading cars...</p></div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">How it works</p><h2>Buy in four steps</h2></div></div>
+    <div class="grid three">
+      <div class="feature"><span class="ico b">1</span><div><h3>Pick a car</h3><p>Browse photos, price and details on this page.</p></div></div>
+      <div class="feature"><span class="ico r">2</span><div><h3>Log in</h3><p>Create a free account to add cars to your cart or book a test drive.</p></div></div>
+      <div class="feature"><span class="ico g">3</span><div><h3>Chat with us</h3><p>Our assistant answers questions as soon as you add a car. Our team replies in chat.</p></div></div>
+      <div class="feature"><span class="ico k">4</span><div><h3>Pay and collect</h3><p>Choose a payment method and arrange delivery or pick-up.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="payment">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Payment methods</p><h2>Ways to pay</h2></div></div>
+    <div class="pay-list" id="payList"></div>
+  </div>
+</section>
+
+<section class="section alt" id="feedback">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Feedback</p><h2>Tell us how we did</h2>
+      <p class="muted">Your feedback goes straight to the manager. Reviews appear here after approval.</p>
+      <form id="fbForm" class="card pad" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="fbName">Your name</label><input id="fbName" autocomplete="name" maxlength="60"></div>
+          <div class="field"><label>Rating</label><div class="stars" id="stars" role="radiogroup" aria-label="Rating"></div></div>
+        </div>
+        <div class="field"><label for="fbText">Your message</label><textarea id="fbText" maxlength="600" placeholder="What went well? What should we improve?"></textarea></div>
+        <p class="err" id="fbErr" role="alert"></p>
+        <button class="btn btn-blue" type="submit">Send feedback</button>
+      </form>
+    </div>
+    <div>
+      <h3 style="margin-top:2.2rem">Recent reviews</h3>
+      <div id="fbList" class="grid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Company contacts</p><h2>Visit or call us</h2>
+      <ul class="contact-list" id="contactList"></ul>
+      <div class="btn-row" id="contactBtns" style="margin-top:1.2rem"></div>
+    </div>
+    <div class="card pad">
+      <h3>Ready to buy?</h3>
+      <p class="muted">Log in to add a car to your cart, book a test drive, get alerts for new cars and chat with the team.</p>
+      <div class="btn-row"><a class="btn btn-red btn-lg" href="/login?next=/shop">Log in or sign up</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>&copy; <span id="yr"></span> B Forward Motors, Masaka</span><span><a href="/login" style="color:#aab3c0">Staff login</a></span></div></footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/public.js"></script>
+</body>
+</html>

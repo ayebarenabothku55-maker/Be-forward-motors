@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop | B Forward Motors Masaka</title>
+<meta name="theme-color" content="#0b3d91">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="stripe"></div>
+<header class="site-header">
+  <div class="wrap">
+    <span id="brand"></span>
+    <nav class="nav" aria-label="Account">
+      <span class="muted small" id="hello"></span>
+      <button class="btn btn-ghost btn-sm icon-btn" id="bellBtn" aria-label="Notifications"><span id="bellIc"></span><span class="badge" id="bellN" hidden>0</span></button>
+      <button class="btn btn-green btn-sm icon-btn" id="chatBtn"><span id="chatIc"></span>Chat<span class="badge" id="chatN" hidden>0</span></button>
+      <button class="btn btn-blue btn-sm icon-btn" id="cartBtn"><span id="cartIc"></span>Cart<span class="badge" id="cartN" hidden>0</span></button>
+      <button class="btn btn-dark btn-sm" id="outBtn"><span id="outIc"></span>Log out</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-block:2rem">
+  <div class="sec-head">
+    <div><p class="eyebrow">Showroom</p><h1 style="font-size:clamp(2rem,4vw,3rem)">Find your car</h1></div>
+    <p id="count"></p>
+  </div>
+  <div class="filters">
+    <div class="field"><label for="q">Search</label><input id="q" type="search" placeholder="Make, model or year"></div>
+    <div class="field"><label for="make">Make</label><select id="make"><option value="">All makes</option></select></div>
+    <div class="field"><label for="max">Max price</label><select id="max">
+      <option value="0">Any price</option><option value="30000000">Up to UGX 30M</option><option value="50000000">Up to UGX 50M</option><option value="80000000">Up to UGX 80M</option><option value="120000000">Up to UGX 120M</option></select></div>
+    <div class="field"><label for="sort">Sort by</label><select id="sort"><option value="new">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+  </div>
+  <div class="grid cars" id="grid"><p class="muted">Loading cars...</p></div>
+
+  <section style="margin-top:3rem">
+    <h2>My bookings and orders</h2>
+    <div class="card pad table-wrap" id="mine"></div>
+  </section>
+</main>
+
+<aside class="panel" id="panel" hidden aria-label="Side panel">
+  <div class="panel-head"><h3 id="panelTitle"></h3><button class="btn btn-ghost btn-sm" id="panelX" aria-label="Close" style="color:#fff;box-shadow:inset 0 0 0 1.5px #3a4049"></button></div>
+  <div class="panel-body" id="panelBody"></div>
+  <div class="panel-foot" id="panelFoot"></div>
+</aside>
+
+<div class="bot-fab" id="botFab" hidden>
+  <div class="bot-bubble" id="botBubble"><button aria-label="Dismiss" id="botX"></button><span id="botText"></span></div>
+  <button class="fab-btn" id="botBtn" aria-label="Open assistant"></button>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/shop.js"></script>
+</body>
+</html>
