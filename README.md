@@ -127,3 +127,7 @@ public/                the pages and their scripts
 test/e2e.js            automated test of the whole API
 render.yaml            one-click Render setup
 ```
+
+## If the site shows plain text with no colours
+
+The page loads but looks like unstyled text and "Loading cars..." never finishes. The style and script files did not reach GitHub in the right folders. Open `https://YOUR-SITE.onrender.com/api/health`. If `missingFiles` is not empty, the repository is missing those files. The folders `public/css` and `public/js` must exist in the repository exactly as in the zip. Upload from a computer, or use Git, so folders are kept.
